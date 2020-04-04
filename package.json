@@ -11,7 +11,7 @@
     "@material-ui/core": "4.9.8",
     "@material-ui/icons": "4.9.1",
     "react": "16.12.0",
-    "react-deffer-render": "0.1.0",
+    "react-defer-renderer": "0.1.0",
     "react-dom": "16.12.0",
     "react-scripts": "3.0.1"
   },
