@@ -41,7 +41,7 @@ const useStyles = makeStyles({
 export function ToDo({ id, userId, title, completed }) {
   const classes = useStyles();
   return (
-    <Grid item xs={12} md={4} lg={3} xl={1} className={classes.root}>
+    <Grid item xs={12} md={4} lg={3} xl={2} className={classes.root}>
       <Grid
         item
         container
@@ -68,12 +68,12 @@ ToDo.propTypes = {
 
 const DeferredTodo = withDeferRender(ToDo); //, { fallback: <CircularProgress /> })
 
-function Todos() {
+function Todos({ size = 1000 }) {
   const renderRef = React.useRef(0);
   const [todos, setTodos] = React.useState([]);
 
   React.useEffect(() => {
-    const allTodos = range(1000).map(t => ({
+    const allTodos = range(size).map(t => ({
       id: t,
       userId: t,
       title: `This is the todo with index ${t}`,
